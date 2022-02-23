@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">HW12_Maktab67_part1_version2</string>
+    <string name="capture_picture">Capture Picture</string>
+    <string name="name">Name</string>
+    <string name="family">Family</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="register">Register</string>
+    <string name="image">image</string>
+    <string name="moviea">movieA</string>
+    <string name="movieb">movieB</string>
+    <string name="moviec">movieC</string>
+    <string name="movied">movieD</string>
+    <string name="moviee">movieE</string>
+    <string name="movief">movieF</string>
+    <string name="movieg">movieG</string>
+    <string name="movieh">movieH</string>
+    <string name="moviei">movieI</string>
+    <string name="moviej">movieJ</string>
+    <string name="moviek">movieK</string>
+    <string name="moviel">movieL</string>
+    <string name="moviem">movieM</string>
+    <string name="movien">movieN</string>
+    <string name="movieo">movieO</string>
+    <string name="moviep">movieP</string>
+    <string name="movieq">movieQ</string>
+    <string name="movier">movieR</string>
+    <string name="movies">movieS</string>
+    <string name="moviet">movieT</string>
+    <string name="movieu">movieU</string>
+    <string name="coming_soon_one">coming soon one</string>
+    <string name="coming_soon_one_share">coming soon one share</string>
+    <string name="coming_soon_two">coming soon two</string>
+    <string name="coming_soon_two_share">coming soon two share</string>
+    <string name="coming_soon_three">coming soon three</string>
+    <string name="coming_soon_three_share">coming soon three share</string>
+</resources>

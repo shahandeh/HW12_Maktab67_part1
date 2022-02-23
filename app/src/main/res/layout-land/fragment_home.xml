@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.example.hw12_maktab67_part1_version2.VM"/>
+
+        <variable
+            name="vm"
+            type="VM" />
+    </data>
+
+    <ScrollView
+        android:layout_width="740dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="740dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="7"
+            android:backgroundTint="@color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_one_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_aaa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieA.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:imageLoader="@{vm.movieA.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_aaa"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviea" />
+
+                    <View
+                        android:id="@+id/likeA"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieA.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_aaa"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_one_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_bbb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieB.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieB.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_bbb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movieb" />
+
+                    <View
+                        android:id="@+id/likeB"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieB.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_bbb"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_one_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_ccc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieC.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieC.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_ccc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviec" />
+
+                    <View
+                        android:id="@+id/likeC"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieC.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_ccc"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_two_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_ddd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieD.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieD.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_ddd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movied" />
+
+                    <View
+                        android:id="@+id/likeD"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieD.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_ddd"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_two_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_eee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieE.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieE.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_eee"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviee" />
+
+                    <View
+                        android:id="@+id/likeE"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieE.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_eee"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_two_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieF.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieF.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_fff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movief" />
+
+                    <View
+                        android:id="@+id/likeF"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieF.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_fff"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_three_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_ggg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieG.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieG.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_ggg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movieg" />
+
+                    <View
+                        android:id="@+id/likeG"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieG.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_ggg"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_three_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_hhh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieH.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieH.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_hhh"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movieh" />
+
+                    <View
+                        android:id="@+id/likeH"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieH.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_hhh"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_three_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_iii"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieI.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieI.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_iii"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviei" />
+
+                    <View
+                        android:id="@+id/likeI"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieI.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_iii"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_four_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_jjj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieJ.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieJ.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_jjj"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviej" />
+
+                    <View
+                        android:id="@+id/likeJ"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieJ.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_jjj"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_four_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_kkk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieK.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieK.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_kkk"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviek" />
+
+                    <View
+                        android:id="@+id/likeK"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieK.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_kkk"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_four_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_lll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieL.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieL.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_lll"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviel" />
+
+                    <View
+                        android:id="@+id/likeL"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieL.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_lll"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_five_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_mmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieM.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieM.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_mmm"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviem" />
+
+                    <View
+                        android:id="@+id/likeM"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieM.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_mmm"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_five_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_nnn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieN.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieN.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_nnn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movien" />
+
+                    <View
+                        android:id="@+id/likeN"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieN.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_nnn"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_five_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_ooo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieO.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieO.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_ooo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movieo" />
+
+                    <View
+                        android:id="@+id/likeO"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieO.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_ooo"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_six_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_ppp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieP.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieP.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_ppp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviep" />
+
+                    <View
+                        android:id="@+id/likeP"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieP.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_ppp"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_six_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp"
+                    tools:ignore="TooManyViews">
+
+                    <TextView
+                        android:id="@+id/tv_qqq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieQ.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieQ.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_qqq"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movieq" />
+
+                    <View
+                        android:id="@+id/likeQ"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieQ.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_qqq"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_six_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_rrr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieR.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieR.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_rrr"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movier" />
+
+                    <View
+                        android:id="@+id/likeR"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieR.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_rrr"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_seven_movie_one"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_sss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieS.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieS.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_sss"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movies" />
+
+                    <View
+                        android:id="@+id/likeS"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieS.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_sss"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_seven_movie_two"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_ttt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieT.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieT.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_ttt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/moviet" />
+
+                    <View
+                        android:id="@+id/likeT"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieT.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_ttt"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_seven_movie_three"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="162dp">
+
+                    <TextView
+                        android:id="@+id/tv_uuu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@{vm.movieU.name}"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        imageLoader="@{vm.movieU.imageUrl}"
+                        app:layout_constraintBottom_toTopOf="@id/tv_uuu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/movieu" />
+
+                    <View
+                        android:id="@+id/likeU"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@{vm.movieU.liked ? @drawable/ic_favorite_checked : @drawable/ic_favorite_unchecked}"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_uuu"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
