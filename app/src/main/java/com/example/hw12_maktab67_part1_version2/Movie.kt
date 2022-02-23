@@ -1,6 +1,5 @@
 package com.example.hw12_maktab67_part1_version2
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 data class Movie(

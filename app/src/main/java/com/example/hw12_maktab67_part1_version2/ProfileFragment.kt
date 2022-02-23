@@ -15,7 +15,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private lateinit var bind: FragmentProfileBinding
 
-    private val vm : VM by activityViewModels()
+    private val vm: VM by activityViewModels()
 
     private lateinit var image: Bitmap
 
@@ -27,7 +27,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         bind = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
         return bind.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 

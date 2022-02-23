@@ -11,7 +11,7 @@ fun ImageView.setProfileImage(bitmap: Bitmap?) {
 }
 
 @BindingAdapter("imageLoader")
-fun ImageView.glide(url: String){
+fun ImageView.glide(url: String) {
     Glide.with(this)
         .load(url)
         .placeholder(R.drawable.loading_animation)
